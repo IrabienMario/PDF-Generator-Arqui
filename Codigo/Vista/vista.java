@@ -16,5 +16,15 @@ public class vista {
         for (String correo : correos) {
             System.out.println(correo);
         }
+        
+        // Crear una instancia de la clase PDFCreator
+        PDFCreator pdf=new PDFCreator();
+        
+        //Llamar al método generarPDF
+        try {
+        	pdf.generarPDF("CorreosPDF.pdf");
+        } catch (IOException e) {
+            System.out.println("Ocurrió un error al crear el PDF: " + e.getMessage());
+        }
     }
 }
